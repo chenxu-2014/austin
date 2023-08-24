@@ -1,5 +1,6 @@
 package com.java3y.austin.service.api.impl.action;
 
+import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
@@ -44,6 +45,7 @@ public class AssembleAction implements BusinessProcess<SendTaskModel> {
 
     @Override
     public void process(ProcessContext<SendTaskModel> context) {
+        System.out.println("======AssembleAction===process============"+DateTime.now());
         SendTaskModel sendTaskModel = context.getProcessModel();
         Long messageTemplateId = sendTaskModel.getMessageTemplateId();
 

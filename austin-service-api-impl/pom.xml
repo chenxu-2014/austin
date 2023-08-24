@@ -22,5 +22,10 @@
             <artifactId>austin-support</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.tencentcloudapi</groupId>
+            <artifactId>tencentcloud-sdk-java</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>

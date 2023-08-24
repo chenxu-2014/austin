@@ -1,6 +1,7 @@
 package com.java3y.austin.service.api.impl.action;
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.StrUtil;
 import com.java3y.austin.common.constant.AustinConstant;
 import com.java3y.austin.common.enums.RespStatusEnum;
@@ -27,6 +28,7 @@ public class PreParamCheckAction implements BusinessProcess<SendTaskModel> {
 
     @Override
     public void process(ProcessContext<SendTaskModel> context) {
+        System.out.println("======PreParamCheckAction===process============"+ DateTime.now());
         SendTaskModel sendTaskModel = context.getProcessModel();
 
         Long messageTemplateId = sendTaskModel.getMessageTemplateId();

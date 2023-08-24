@@ -1,6 +1,7 @@
 package com.java3y.austin.service.api.impl.action;
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.date.DateTime;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.base.Throwables;
@@ -42,6 +43,7 @@ public class SendMqAction implements BusinessProcess<SendTaskModel> {
 
     @Override
     public void process(ProcessContext<SendTaskModel> context) {
+        System.out.println("======SendMqAction===process============"+ DateTime.now());
         SendTaskModel sendTaskModel = context.getProcessModel();
         try {
             if (BusinessCode.COMMON_SEND.getCode().equals(context.getCode())) {

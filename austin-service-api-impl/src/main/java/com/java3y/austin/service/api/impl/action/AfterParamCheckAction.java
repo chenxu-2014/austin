@@ -2,6 +2,7 @@ package com.java3y.austin.service.api.impl.action;
 
 
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.date.DateTime;
 import cn.hutool.core.util.ReUtil;
 import com.alibaba.fastjson.JSON;
 import com.java3y.austin.common.domain.TaskInfo;
@@ -42,6 +43,7 @@ public class AfterParamCheckAction implements BusinessProcess<SendTaskModel> {
 
     @Override
     public void process(ProcessContext<SendTaskModel> context) {
+        System.out.println("======AfterParamCheckAction===process============"+DateTime.now());
         SendTaskModel sendTaskModel = context.getProcessModel();
         List<TaskInfo> taskInfo = sendTaskModel.getTaskInfo();
 
