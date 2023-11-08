@@ -64,7 +64,7 @@ services:
       - jobmanager
     environment:
       - |
-        FLINK_PROPERTIES=
+        FLINK_PROPERT=
         jobmanager.rpc.address: jobmanager
       - SET_CONTAINER_TIMEZONE=true
       - CONTAINER_TIMEZONE=Asia/Shanghai
@@ -85,7 +85,7 @@ services:
     command: taskmanager
     environment:
       - |
-        FLINK_PROPERTIES=
+        FLINK_PROPERT=
         jobmanager.rpc.address: jobmanager
         taskmanager.numberOfTaskSlots: 2
       - SET_CONTAINER_TIMEZONE=true

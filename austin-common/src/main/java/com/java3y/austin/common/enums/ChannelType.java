@@ -23,19 +23,19 @@ public enum ChannelType implements PowerfulEnum {
     /**
      * IM(站内信)  -- 未实现该渠道
      */
-    IM(10, "IM(站内信)", ImContentModel.class, "im"),
+    IM(10, "IM(站内信)", ImContentModel.class, "im.ies"),
     /**
      * push(通知栏) --安卓 已接入 个推
      */
-    PUSH(20, "push(通知栏)", PushContentModel.class, "push"),
+    PUSH(20, "push(通知栏)", PushContentModel.class, "push.ies"),
     /**
      * sms(短信)  -- 腾讯云、云片
      */
-    SMS(30, "sms(短信)", SmsContentModel.class, "sms"),
+    SMS(30, "sms(短信)", SmsContentModel.class, "sms.ies"),
     /**
      * email(邮件) -- QQ、163邮箱
      */
-    EMAIL(40, "email(邮件)", EmailContentModel.class, "email"),
+    EMAIL(40, "email(邮件)", EmailContentModel.class, "email.ies"),
     /**
      * officialAccounts(微信服务号) -- 官方测试账号
      */
@@ -68,6 +68,11 @@ public enum ChannelType implements PowerfulEnum {
      * alipayMiniProgram(支付宝小程序)
      */
     ALIPAY_MINI_PROGRAM(120, "alipayMiniProgram(支付宝小程序)", AlipayMiniProgramContentModel.class, "alipay_mini_program"),
+    /**
+     * Test cx 20231102
+     */
+    SHUAI_KAFKA_TEST(130, "Test(测试)", ShuaiKafkaTestContentModel.class, "shuai_Kafka_Test.ies"),
+
     ;
 
     /**

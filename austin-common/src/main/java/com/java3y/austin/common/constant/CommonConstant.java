@@ -65,7 +65,7 @@ public class CommonConstant {
     /**
      * JSON默认值
      */
-    public final static String EMPTY_JSON_OBJECT = "{}";
+    public final static String EMPTY_JSON_OBJECT = "{\"deduplication_10\":{\"num\":1,\"time\":300},\"deduplication_20\":{\"num\":5}}";
     public final static String EMPTY_VALUE_JSON_ARRAY = "[]";
 
     /**

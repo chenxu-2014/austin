@@ -31,15 +31,15 @@ public class TencentSmsAccount extends SmsAccount {
     /**
      * api相关
      */
-    private String url;
-    private String region;
+    private String url="sms.tencentcloudapi.com";
+    private String region="ap-guangzhou";
 
     /**
      * 账号相关
      */
-    private String secretId;
-    private String secretKey;
-    private String smsSdkAppId;
-    private String templateId;
-    private String signName;
+    private String secretId="";
+    private String secretKey="";
+    private String smsSdkAppId="1400836295";
+    private String templateId="1854942";
+    private String signName="Naizikou公众号";
 }

@@ -35,11 +35,15 @@ public class KafkaSendMqServiceImpl implements SendMqService {
 
     @Override
     public void send(String topic, String jsonValue, String tagId) {
+        System.out.println("topic==============================="+topic);
+        //kafkaTemplate.send("shuaiTopic", "NaiziKou",2,);
         if (StrUtil.isNotBlank(tagId)) {
             List<Header> headers = Arrays.asList(new RecordHeader(tagIdKey, tagId.getBytes(StandardCharsets.UTF_8)));
+            kafkaTemplate.send(new ProducerRecord("shuaiTopic", null, null, null, "shuaiTopic", headers));
             kafkaTemplate.send(new ProducerRecord(topic, null, null, null, jsonValue, headers));
             return;
         }
+        System.out.println(" will not run ==============");
         kafkaTemplate.send(topic, jsonValue);
     }
 

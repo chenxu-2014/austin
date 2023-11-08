@@ -16,6 +16,7 @@ import java.util.Map;
 public class DeduplicationHolder {
 
     private final Map<Integer, Builder> builderHolder = new HashMap<>(4);
+
     private final Map<Integer, DeduplicationService> serviceHolder = new HashMap<>(4);
 
     public Builder selectBuilder(Integer key) {
@@ -24,6 +25,7 @@ public class DeduplicationHolder {
 
     public DeduplicationService selectService(Integer key) {
         return serviceHolder.get(key);
+
     }
 
     public void putBuilder(Integer key, Builder builder) {

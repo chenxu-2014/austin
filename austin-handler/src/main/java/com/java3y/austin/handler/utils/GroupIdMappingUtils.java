@@ -24,6 +24,7 @@ public class GroupIdMappingUtils {
         List<String> groupIds = new ArrayList<>();
         for (ChannelType channelType : ChannelType.values()) {
             for (MessageType messageType : MessageType.values()) {
+                System.out.println("getAllGroupIds==="+channelType.getCodeEn() + "." + messageType.getCodeEn());
                 groupIds.add(channelType.getCodeEn() + "." + messageType.getCodeEn());
             }
         }

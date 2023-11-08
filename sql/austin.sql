@@ -49,7 +49,7 @@ CREATE TABLE `sms_record`
     `supplier_id`         tinyint(4) NOT NULL DEFAULT '0' COMMENT '发送短信渠道商的ID',
     `supplier_name`       varchar(40) COLLATE utf8mb4_unicode_ci  NOT NULL DEFAULT '' COMMENT '发送短信渠道商的名称',
     `msg_content`         varchar(600) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '短信发送的内容',
-    `series_id`           varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '下发批次的ID',
+    `ser_id`           varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '下发批次的ID',
     `charging_num`        tinyint(4) NOT NULL DEFAULT '0' COMMENT '计费条数',
     `report_content`      varchar(50)                             NOT NULL DEFAULT '' COMMENT '回执内容',
     `status`              tinyint(4) NOT NULL DEFAULT '0' COMMENT '短信状态： 10.发送 20.成功 30.失败',

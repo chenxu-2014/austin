@@ -10,6 +10,8 @@ import com.tencentcloudapi.sms.v20210111.SmsClient;
 import com.tencentcloudapi.sms.v20210111.models.SendSmsRequest;
 import com.tencentcloudapi.sms.v20210111.models.SendSmsResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,7 +28,8 @@ import java.net.URL;
 @Slf4j
 public class TencentSmsScript {
 
-
+    @Autowired
+    private StringRedisTemplate redisTemplate;
 
     public static void send(String phone, String content,String secretId,String secretKey,String sdkAppId) {
 
@@ -98,7 +101,7 @@ public class TencentSmsScript {
             sb.append(wea.getCity()+",");
             sb.append(wea.getWea()+",");
             sb.append("空气质量"+wea.getAir_level());
-            send("181---", sb.toString(), "AKIDPqBLEvPxLZbOyOcePyMXTDj273mKgood", "iwAE6lCQQEtRuJZdVCi2DNWknh5LQN9l", "1400836295");
+            send("18142349313", sb.toString(), "AKIDUckojT2VnuqtoX3Vu", "Wr0y2sXzPcfWI", "1400836295");
 
         } catch (Exception e) {
             e.printStackTrace();
